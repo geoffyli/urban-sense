@@ -1,0 +1,17 @@
+<t-cell class="mb-16 mt-16" title="选问题分类" arrow hover note="{{categoryText}}" bind:click="onCategoryPicker" />
+
+
+<t-picker
+  visible="{{categoryVisible}}"
+  value="{{categoryValue}}"
+  data-key="category"
+  title="选择问题分类"
+  cancelBtn="取消"
+  confirmBtn="确认"
+  usingCustomNavbar
+  bindchange="onPickerChange"
+  bindpick="onColumnChange"
+  bindcancel="onPickerCancel"
+>
+  <t-picker-item options="{{categories}}" />
+</t-picker>

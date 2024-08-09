@@ -1,2 +1,19 @@
 <!--pages/form/form.wxml-->
-<text>pages/form/form.wxml</text>
+<!-- Header -->
+<view class="page-title">TabBar 标签栏</view>
+<view class="page-desc">用于在不同功能模块之间进行快速切换，位于页面底部。</view>
+<t-demo title="选择问题分类">
+  <picker></picker>
+  </t-demo>
+  <t-demo title="具体问题描述">
+    <textarea class="custom-textarea"></textarea>
+    <!-- Flexbox container for button and text -->
+    <view class="inline-container">
+      <view class="loc-desc">{{locMsg}}</view>
+      <loc-btn id="locationButton" bind:locChanged="onLocChanged"></loc-btn>
+    </view>
+  </t-demo>
+  <t-demo title="01 组件类型">
+  <picker></picker>
+  </t-demo>
+<steps></steps>

@@ -1,0 +1,44 @@
+.page-title {
+  font-size: 48rpx;
+  font-weight: 700;
+  line-height: 64rpx;
+  margin: 48rpx 32rpx 0;
+  color: var(--td-font-gray-1, rgba(0, 0, 0, 0.9));
+}
+.page-desc {
+  font-size: 28rpx;
+  color: var(--td-font-gray-2, rgba(0, 0, 0, 0.6));
+  margin: 16rpx 32rpx 0;
+  line-height: 44rpx;
+}
+
+.custom-textarea {
+  width: 100%;
+  background-color: #f0f0f0; /* Set your desired background color */
+  /* border: 1px solid #ccc; Optional: Add a border */
+  /* padding: 10px; Optional: Add some padding */
+  font-size: 16px; /* Optional: Adjust font size */
+  /* border-radius: 5px; Optional: Add rounded corners */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Flexbox container for inline items */
+.inline-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: flex-end; /* Aligns items horizontally to the right */
+  width: 100%; /* Make sure the container takes full width */
+}
+
+/* Optional: Add some spacing between the button and text */
+.inline-container loc-btn {
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+
+.loc-desc {
+  font-size: 28rpx;
+  color: var(--td-font-gray-2, rgba(0, 0, 0, 0.6));
+  line-height: 24rpx;
+  margin-top: 0px; /* Remove top margin to align with the button */
+  text-align: center; /* Center the text horizontally */
+}
