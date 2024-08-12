@@ -4,7 +4,8 @@
     "t-loading": "tdesign-miniprogram/loading/loading",
     "picker": "./picker",
     "textarea": "./textarea",
-    "loc-btn": "./loc-btn"
+    "loc-btn": "./loc-btn",
+    "file-upload": "./file-upload"
   },
   "component": true
 }

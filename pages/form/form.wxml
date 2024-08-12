@@ -1,9 +1,10 @@
 <!--pages/form/form.wxml-->
-<!-- Header -->
-<view class="page-title">TabBar 标签栏</view>
-<view class="page-desc">用于在不同功能模块之间进行快速切换，位于页面底部。</view>
-<t-demo title="选择问题分类">
-  <picker></picker>
+<scroll-view scroll-y="true" style="height: calc(100vh - 60px);">
+  <!-- Header -->
+  <view class="page-title">提交反馈</view>
+  <view class="page-desc">请填写以下内容并点击提交按钮上传</view>
+  <t-demo title="选择问题分类">
+    <picker></picker>
   </t-demo>
   <t-demo title="具体问题描述">
     <textarea class="custom-textarea"></textarea>
@@ -13,7 +14,8 @@
       <loc-btn id="locationButton" bind:locChanged="onLocChanged"></loc-btn>
     </view>
   </t-demo>
-  <t-demo title="01 组件类型">
-  <picker></picker>
+  <t-demo title="上传文件">
+    <file-upload class="file-upload"></file-upload>
   </t-demo>
-<steps></steps>
+
+</scroll-view>

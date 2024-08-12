@@ -36,9 +36,13 @@
 }
 
 .loc-desc {
+  margin-left: 10px; /* Adjust spacing as needed */
   font-size: 28rpx;
   color: var(--td-font-gray-2, rgba(0, 0, 0, 0.6));
-  line-height: 24rpx;
   margin-top: 0px; /* Remove top margin to align with the button */
   text-align: center; /* Center the text horizontally */
+}
+
+.file-upload {
+  margin-left: 20px; /* Adjust spacing as needed */
 }
