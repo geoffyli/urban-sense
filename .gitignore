@@ -1,14 +1,47 @@
-# Windows
-[Dd]esktop.ini
-Thumbs.db
-$RECYCLE.BIN/
-
-# macOS
-.DS_Store
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-
-# Node.js
+# Ignore all node_modules directories
 node_modules/
+
+# Ignore all npm package-lock files
+package-lock.json
+yarn.lock
+
+# Ignore WeChat mini program compilation files
+dist/
+build/
+
+# Ignore WeChat mini program IDE files
+.project.config.json
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+logs/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore WeChat auto-generated files
+miniprogram_npm/
+miniprogram_dist/
+miniprogram_out/
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
+
+# Ignore WeChat mini program version control
+project.private.config.json
+
+# Ignore minified files
+*.min.js
+
+# Ignore code coverage reports
+coverage/
+*.lcov
