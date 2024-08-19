@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+    "login-btn": "./login-btn"
   }
 }

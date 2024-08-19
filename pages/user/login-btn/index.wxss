@@ -1,0 +1,14 @@
+.button-example {
+  margin: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height to center vertically */
+  width: 100%; /* Full width of the page */
+  box-sizing: border-box; /* Ensure padding and borders are included in the width and height */
+}

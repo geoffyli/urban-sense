@@ -3,11 +3,11 @@ Component({
     categoryText: '',
     categoryValue: [],
     categories: [
-      { label: '北京市', value: '北京市' },
-      { label: '上海市', value: '上海市' },
-      { label: '广州市', value: '广州市' },
-      { label: '深圳市', value: '深圳市' },
-      { label: '成都市', value: '成都市' },
+      { label: '基础设施', value: '基础设施' },
+      { label: '住房与社区', value: '住房与社区' },
+      { label: '环境保护', value: '环境保护' },
+      { label: '公共服务', value: '公共服务' },
+      { label: '文化与娱乐', value: '文化与娱乐' },
     ],
   },
 
