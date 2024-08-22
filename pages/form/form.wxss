@@ -43,6 +43,18 @@
   text-align: center; /* Center the text horizontally */
 }
 
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.upload-container submit-btn {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+
 .file-upload {
-  margin-left: 20px; /* Adjust spacing as needed */
+  margin-left: auto; /* Adjust spacing as needed */
+  margin-right: 12px;
 }

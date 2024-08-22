@@ -5,7 +5,8 @@
     "picker": "./picker",
     "textarea": "./textarea",
     "loc-btn": "./loc-btn",
-    "file-upload": "./file-upload"
+    "file-upload": "./file-upload",
+    "submit-btn": "./submit-btn"
   },
   "component": true
 }
