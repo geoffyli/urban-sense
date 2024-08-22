@@ -21,7 +21,6 @@ Component({
       // Store the file content in the fileList and formData
       fileList.push({ ...file });
       this.setData({ fileList });
-      console.log(fileList)
     },
   }
 });

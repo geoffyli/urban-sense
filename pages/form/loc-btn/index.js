@@ -1,9 +1,9 @@
 Component({
   data: {
-    flag: false,
-    theme: "",
-    text: "上传位置",
-    name: "未选择位置",
+    flag: false,   // True: Loc selected
+    theme: "", 
+    btnText: "上传位置",
+    desc: "未选择位置",
     address: "None",
     latitude: null,
     longitude: null
@@ -16,9 +16,9 @@ Component({
       if (this.data.flag) {
         this.setData({
           flag: false,
-          text: "上传位置",
+          btnText: "上传位置",
           theme: "",
-          name: "未选择位置",
+          desc: "未选择位置",
           address: "None",
           latitude: null,
           longitude: null
@@ -27,9 +27,9 @@ Component({
         wx.chooseLocation({
           success: (res) => {
             this.setData({
-              name: res.name == ""? "地图选点": res.name,
+              desc: res.name == ""? "地图选点": res.name,
               address: res.address,
-              text: "取消上传",
+              btnText: "取消上传",
               theme: "danger",
               latitude: res.latitude,
               longitude: res.longitude,

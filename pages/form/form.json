@@ -6,7 +6,7 @@
     "textarea": "./textarea",
     "loc-btn": "./loc-btn",
     "file-upload": "./file-upload",
-    "submit-btn": "./submit-btn"
+    "t-button": "tdesign-miniprogram/button/button"
   },
   "component": true
 }

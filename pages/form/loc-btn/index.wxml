@@ -1,3 +1,3 @@
 <view class="loc-btn-container">
-  <t-button size="large" bindtap="chooseLoc" theme="{{theme}}">{{text}}</t-button>
+  <t-button size="large" bindtap="chooseLoc" theme="{{theme}}">{{btnText}}</t-button>
 </view>

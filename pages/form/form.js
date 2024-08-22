@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-      locMsg: null
+
   },
 
   /**
@@ -27,7 +27,7 @@ Page({
    */
   onShow() {
     this.getTabBar().init();
-    this.updateLocationName()
+    this.updateLocationDesc()
   },
 
   /**
@@ -65,13 +65,19 @@ Page({
 
   },
 
-  onLocChanged(){
-    this.updateLocationName()
+  onLocChanged() {
+    this.updateLocationDesc()
   },
 
-  updateLocationName() {
+  updateLocationDesc() {
     this.setData({
-      locMsg: this.selectComponent("#locationButton").data['name']
+      locMsg: this.selectComponent("#locationButton").data['desc']
     })
+  },
+
+  submitFeedback(e) {
+    console.log(this)
+    console.log("submit feedback")
   }
+
 })

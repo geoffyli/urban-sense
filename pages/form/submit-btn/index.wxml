@@ -1,3 +1,0 @@
-<view class="button-example">
-  <t-button class="btn" theme="primary" size="large">提交反馈</t-button>
-</view>

@@ -9,32 +9,26 @@ Component({
       { label: '公共服务', value: '公共服务' },
       { label: '文化与娱乐', value: '文化与娱乐' },
     ],
+    pickedValue: null
   },
 
   methods: {
     onColumnChange(e) {
-      console.log('picker pick:', e);
     },
 
     onPickerChange(e) {
       const { key } = e.currentTarget.dataset;
       const { value } = e.detail;
 
-      console.log('picker change:', e.detail);
       this.setData({
-        [`${key}Visible`]: false,
-        [`${key}Value`]: value,
-        [`${key}Text`]: value.join(' '),
-      });
+        pickedValue: value[0]
+      })
     },
 
     onPickerCancel(e) {
       const { key } = e.currentTarget.dataset;
       console.log(e, '取消');
-      console.log('picker1 cancel:');
-      this.setData({
-        [`${key}Visible`]: false,
-      });
+      console.log('Picker canceled:');
     },
 
     onCategoryPicker() {

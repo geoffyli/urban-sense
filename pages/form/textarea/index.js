@@ -12,7 +12,6 @@ Component({
      * Component initial data
      */
     data: {
-
     },
 
     /**

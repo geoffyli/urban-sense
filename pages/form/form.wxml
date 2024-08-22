@@ -15,9 +15,9 @@
     </view>
   </t-demo>
   <t-demo title="上传文件">
-    <view class="upload-container">
+    <view class="upload-container" bind:tap="submitFeedback">
       <file-upload class="file-upload"></file-upload>
-      <submit-btn class="sibmit-btn"></submit-btn>
+        <t-button class="submit-btn" theme="primary" size="large" bind:tap="submitFeedback">提交反馈</t-button>
     </view>
   </t-demo>
 </scroll-view>
