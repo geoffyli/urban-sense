@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    problemDesc: ""
   },
 
   /**
@@ -27,7 +27,7 @@ Page({
    */
   onShow() {
     this.getTabBar().init();
-    this.updateLocationDesc()
+    this.updateLocationDesc();
   },
 
   /**
@@ -75,9 +75,52 @@ Page({
     })
   },
 
-  submitFeedback(e) {
-    console.log(this)
-    console.log("submit feedback")
+  updateProblemDescValue(e) {
+    this.setData({
+      problemDesc: e.detail.value
+    })
+  },
+
+  extractFilename(url) {
+    // Use the lastIndexOf method to find the last '/' character in the URL
+    const lastSlashIndex = url.lastIndexOf('/');
+    
+    // Extract the substring starting right after the last '/' character
+    const filename = url.substring(lastSlashIndex + 1);
+    
+    return filename;
+  },
+
+  submitFeedback() {
+
+    // const fileList = this.selectComponent(".file-upload").data['fileList'];
+    const fileList = this.selectComponent(".file-upload").data['fileList']
+    const videoFiles = fileList.filter(media => media.type === 'video');
+    const videoFileNames = videoFiles.map(media => this.extractFilename(media.url));
+    const imageFiles = fileList.filter(media => media.type === 'image');
+    const imageFileNames = imageFiles.map(media => this.extractFilename(media.url));
+    const filePaths = fileList.map(media => media.url);
+
+    // Convert the IssueDto data to JSON string
+    const issueDto = {
+      platformId: 1,
+      classification: this.selectComponent(".category-picker").data['pickedValue'],
+      description: this.data.problemDesc,
+      locationDescription: this.selectComponent(".loc-btn").data['address'],
+      longitude: this.selectComponent(".loc-btn").data['longitude'],
+      latitude: this.selectComponent(".loc-btn").data['latitude'],
+      photoFileNames: videoFileNames,
+      videoFileNames: videoFileNames
+    };
+    console.log(filePaths)
+
+    // Perform the file upload
+    const Multipart = require('../../utils/Multipart.min');
+    const m = new Multipart({files:[], fields:[]})
+    m.field = issueDto;
+    filePaths.forEach(filePath => m.file({filePath: filePath}))
+    m.submit('http://localhost:8080/api/issue/save');
+
   }
 
 })

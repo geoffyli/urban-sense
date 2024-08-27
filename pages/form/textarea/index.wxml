@@ -1,7 +1,0 @@
-<t-textarea
-  t-class="external-class"
-  placeholder="请输入具体问题描述，不超过200字"
-  maxlength="200"
-  disableDefaultPadding="{{true}}"
-  indicator
-/>

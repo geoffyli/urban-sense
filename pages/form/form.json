@@ -3,10 +3,10 @@
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
     "t-loading": "tdesign-miniprogram/loading/loading",
     "picker": "./picker",
-    "textarea": "./textarea",
     "loc-btn": "./loc-btn",
     "file-upload": "./file-upload",
-    "t-button": "tdesign-miniprogram/button/button"
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-textarea": "tdesign-miniprogram/textarea/textarea"
   },
   "component": true
 }
