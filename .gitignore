@@ -39,8 +39,8 @@ miniprogram_out/
 # Ignore WeChat mini program version control
 project.private.config.json
 
-# Ignore minified files
-*.min.js
+# # Ignore minified files
+# *.min.js
 
 # Ignore code coverage reports
 coverage/
