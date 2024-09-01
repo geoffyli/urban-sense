@@ -114,11 +114,12 @@ Page({
     };
 
     // Perform the file upload
-    const Multipart = require('../../utils/Multipart.min');
-    const m = new Multipart({files:[], fields:[]})
-    m.field = issueDto;
-    filePaths.forEach(filePath => m.file({filePath: filePath}))
+    const Multipart = require('../../utils/Multipart.min.js');
+    const m = new Multipart({files:[], fields:[]});
+    m.field({ name: 'issueDto', value: JSON.stringify(issueDto) });
+    filePaths.forEach(filePath => m.file({ name: 'multipartFile', filePath: filePath }));
     m.submit('http://localhost:8080/api/issue/save');
+    
 
   }
 
