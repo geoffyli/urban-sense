@@ -109,10 +109,9 @@ Page({
       locationDescription: this.selectComponent(".loc-btn").data['address'],
       longitude: this.selectComponent(".loc-btn").data['longitude'],
       latitude: this.selectComponent(".loc-btn").data['latitude'],
-      photoFileNames: videoFileNames,
+      photoFileNames: imageFileNames,
       videoFileNames: videoFileNames
     };
-    console.log(filePaths)
 
     // Perform the file upload
     const Multipart = require('../../utils/Multipart.min');

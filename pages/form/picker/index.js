@@ -21,7 +21,10 @@ Component({
       const { value } = e.detail;
 
       this.setData({
-        pickedValue: value[0]
+        pickedValue: value[0],
+        [`${key}Visible`]: false,
+        [`${key}Value`]: value,
+        [`${key}Text`]: value.join(' ')
       })
     },
 
