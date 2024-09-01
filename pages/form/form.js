@@ -118,7 +118,7 @@ Page({
     const m = new Multipart({files:[], fields:[]});
     m.field({ name: 'issueDto', value: JSON.stringify(issueDto) });
     filePaths.forEach(filePath => m.file({ name: 'multipartFile', filePath: filePath }));
-    m.submit('http://localhost:8080/api/issue/save');
+    m.submit('http://localhost:8080/api/issue/save', {header:{'Authorization': 'Bearer ' + wx.getStorageSync('authToken') ?? "Default Value"}});
     
 
   }

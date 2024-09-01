@@ -34,7 +34,20 @@ Component({
                     code: res.code
                   },
                   success: function (res){
-                    console.log(res)
+                    if (res.statusCode === 200) {
+                      const token = res.data.data.token; // Assuming the token is in res.data.token
+                      wx.setStorageSync('authToken', token); // Store the token in storage
+                      wx.showToast({
+                        title: 'Login successful',
+                        icon: 'success'
+                      });
+                      // Redirect or perform additional actions
+                    } else {
+                      wx.showToast({
+                        title: res.data.errorMessage || 'Login failed',
+                        icon: 'none'
+                      });
+                    }
                   }               
                 })
               } else {
