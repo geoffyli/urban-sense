@@ -35,8 +35,10 @@ Component({
                   },
                   success: function (res){
                     if (res.statusCode === 200) {
-                      const token = res.data.data.token; // Assuming the token is in res.data.token
+                      const token = res.data.data.token;
+                      const userId = res.data.data.id;
                       wx.setStorageSync('authToken', token); // Store the token in storage
+                      wx.setStorageSync('userId', userId);
                       wx.showToast({
                         title: 'Login successful',
                         icon: 'success'
