@@ -16,13 +16,14 @@ Component({
           'userId': wx.getStorageSync('userId')
         },
         success: (res) => {
-          const { fileList = [] } = this.data
+          const filePath = res.data.data;
           // Store the file content in the fileList and formData
+          const { fileList = [] } = this.data;
+          file['filePath'] = filePath;
           fileList.push({ ...file });
           this.setData({ fileList });
         }
       })
-
     },
   }
 });

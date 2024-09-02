@@ -96,10 +96,9 @@ Page({
     // const fileList = this.selectComponent(".file-upload").data['fileList'];
     const fileList = this.selectComponent(".file-upload").data['fileList']
     const videoFiles = fileList.filter(media => media.type === 'video');
-    const videoFileNames = videoFiles.map(media => this.extractFilename(media.url));
+    const videoFilePaths = videoFiles.map(media => media.filePath);
     const imageFiles = fileList.filter(media => media.type === 'image');
-    const imageFileNames = imageFiles.map(media => this.extractFilename(media.url));
-    const filePaths = fileList.map(media => media.url);
+    const imageFilePaths = imageFiles.map(media => media.filePath);
 
     // Convert the IssueDto data to JSON string
     const issueDto = {
@@ -109,8 +108,8 @@ Page({
       locationDescription: this.selectComponent(".loc-btn").data['address'],
       longitude: this.selectComponent(".loc-btn").data['longitude'],
       latitude: this.selectComponent(".loc-btn").data['latitude'],
-      photoFileNames: imageFileNames,
-      videoFileNames: videoFileNames
+      photoFileUrls: imageFilePaths,
+      videoFileUrls: videoFilePaths
     };
 
     wx.request({
