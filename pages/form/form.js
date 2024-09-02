@@ -99,8 +99,6 @@ Page({
     const videoFilePaths = videoFiles.map(media => media.filePath);
     const imageFiles = fileList.filter(media => media.type === 'image');
     const imageFilePaths = imageFiles.map(media => media.filePath);
-    console.log("image file paths: ")
-    console.log(imageFilePaths)
 
     // Convert the IssueDto data to JSON string
     const issueDto = {

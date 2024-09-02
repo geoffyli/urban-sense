@@ -16,10 +16,10 @@ Component({
           'userId': wx.getStorageSync('userId')
         },
         success: (res) => {
-          const responseData = JSON.parse(res.data);
+          // const responseData = JSON.parse(res.data);
           console.log(res.data)
-          console.log(responseData)
-          const filePath = responseData.data;
+          // console.log(responseData)
+          const filePath = res.data.data;
           console.log("In uploader: filePath from API: " + filePath)
           // Store the file content in the fileList and formData
           const { fileList = [] } = this.data;
