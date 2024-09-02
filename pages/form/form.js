@@ -121,7 +121,6 @@ Page({
         'userId': wx.getStorageSync('userId')
       }
     })
-
   }
 
 })
