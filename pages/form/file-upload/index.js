@@ -17,9 +17,7 @@ Component({
         },
         success: (res) => {
           const responseData = JSON.parse(res.data);
-          console.log(responseData)
-          console.log(typeof responseData.data)
-          const filePath = responseData.data;
+          const filePath = responseData.data.url;
           // Store the file content in the fileList and formData
           const { fileList = [] } = this.data;
           file['filePath'] = filePath;
