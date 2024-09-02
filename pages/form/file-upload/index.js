@@ -15,7 +15,7 @@ Component({
           'token': wx.getStorageSync('authToken'),
           'userId': wx.getStorageSync('userId')
         },
-        success(res){
+        success: (res) => {
           const { fileList = [] } = this.data
           // Store the file content in the fileList and formData
           fileList.push({ ...file });

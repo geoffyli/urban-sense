@@ -12,13 +12,6 @@ Component({
     pickedValue: null
   },
 
-  lifetimes: {
-    attached() {
-      // Fetch categories when the component is attached
-      this.fetchCategories();
-    }
-  },
-
   methods: {
     fetchCategories() {
       wx.request({
@@ -70,11 +63,11 @@ Component({
 
     onPickerCancel(e) {
       const { key } = e.currentTarget.dataset;
-      console.log(e, '取消');
       console.log('Picker canceled:');
     },
 
     onCategoryPicker() {
+      this.fetchCategories();
       this.setData({ categoryVisible: true });
     },
   },
