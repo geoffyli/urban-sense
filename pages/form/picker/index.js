@@ -24,9 +24,10 @@ Component({
       wx.request({
         url: 'http://localhost:8080/api/classification/getAll',
         method: 'GET',
-        // header: {
-        //   'Authorization': 'Bearer ' + wx.getStorageSync('authToken')
-        // },
+        header: {
+          'token': wx.getStorageSync('authToken'),
+          'userId': wx.getStorageSync('userId')
+        },
         success: (res) => {
           if (res.statusCode === 200) {
             // Extract classification names and transform them into { label, value } format

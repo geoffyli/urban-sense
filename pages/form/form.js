@@ -113,13 +113,15 @@ Page({
       videoFileNames: videoFileNames
     };
 
-    // Perform the file upload
-    const Multipart = require('../../utils/Multipart.min.js');
-    const m = new Multipart({files:[], fields:[]});
-    m.field({ name: 'issueDto', value: JSON.stringify(issueDto) });
-    filePaths.forEach(filePath => m.file({ name: 'multipartFile', filePath: filePath }));
-    m.submit('http://localhost:8080/api/issue/save', {header:{'Authorization': 'Bearer ' + wx.getStorageSync('authToken') ?? "Default Value"}});
-    
+    wx.request({
+      url: 'http://localhost:8080/api/issue/save',
+      data: JSON.stringify(issueDto),
+      method: 'POST',
+      header:{
+        'token': wx.getStorageSync('authToken'),
+        'userId': wx.getStorageSync('userId')
+      }
+    })
 
   }
 
