@@ -17,11 +17,14 @@ Component({
         },
         success: (res) => {
           const filePath = res.data.data;
+          console.log("In uploader: filePath from API: " + filePath)
           // Store the file content in the fileList and formData
           const { fileList = [] } = this.data;
           file['filePath'] = filePath;
           fileList.push({ ...file });
           this.setData({ fileList });
+          console.log("In uploader: fileList: ")
+          console.log(fileList)
         }
       })
     },
